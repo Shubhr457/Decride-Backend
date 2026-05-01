@@ -1,0 +1,20 @@
+{
+  "name": "decride-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shubhr457/Decride-Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shubhr457/Decride-Backend/issues"
+  },
+  "homepage": "https://github.com/Shubhr457/Decride-Backend#readme",
+  "description": ""
+}
