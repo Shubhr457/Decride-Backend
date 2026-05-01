@@ -1,6 +1,6 @@
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
 
-if (process.env.NODE_ENV !== 'test') {
+if (process.env.NODE_ENV !== "test") {
   dotenv.config();
 }
 
@@ -11,14 +11,20 @@ const toNumber = (value: string | undefined, fallback: number): number => {
 };
 
 export const env = {
-  nodeEnv: process.env.NODE_ENV || 'development',
+  nodeEnv: process.env.NODE_ENV || "development",
   port: toNumber(process.env.PORT, 5000),
-  mongoUri: process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/decride',
-  corsOrigin: process.env.CORS_ORIGIN || '*',
+  mongoUri: process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/decride",
+  corsOrigin: process.env.CORS_ORIGIN || "*",
   rateLimitWindowMs: toNumber(process.env.RATE_LIMIT_WINDOW_MS, 15 * 60 * 1000),
   rateLimitMaxRequests: toNumber(process.env.RATE_LIMIT_MAX_REQUESTS, 100),
-  logLevel: process.env.LOG_LEVEL || 'info',
+  logLevel: process.env.LOG_LEVEL || "info",
+  jwtAccessSecret:
+    process.env.JWT_ACCESS_SECRET || "decride-local-development-secret",
+  jwtAccessExpiresIn: process.env.JWT_ACCESS_EXPIRES_IN || "1d",
+  walletLoginMessagePrefix:
+    process.env.WALLET_LOGIN_MESSAGE_PREFIX ||
+    "Sign this nonce to authenticate with Decride:",
 };
 
-export const isProduction = env.nodeEnv === 'production';
-export const isTest = env.nodeEnv === 'test';
+export const isProduction = env.nodeEnv === "production";
+export const isTest = env.nodeEnv === "test";
