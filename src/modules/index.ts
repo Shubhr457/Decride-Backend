@@ -5,6 +5,7 @@ import driverRoutes from "./drivers/routes";
 import healthRoutes from "./health/routes";
 import kycRoutes from "./kyc/routes";
 import riderRoutes from "./riders/routes";
+import rideRoutes from "./rides/routes";
 import userRoutes from "./users/routes";
 
 const router = Router();
@@ -15,6 +16,7 @@ router.use("/drivers", driverRoutes);
 router.use("/health", healthRoutes);
 router.use("/kyc", kycRoutes);
 router.use("/riders", riderRoutes);
+router.use("/rides", rideRoutes);
 router.use("/users", userRoutes);
 
 export default router;
